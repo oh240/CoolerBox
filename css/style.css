@@ -1,0 +1,52 @@
+
+body {
+	background-image:url("../img/cotton01.jpg");
+}
+
+i {
+	cursor: pointer;
+}
+
+select {
+	height: 25px;
+}
+.grid h2 {
+	color: #ae7f2a;
+}
+
+.yellow {
+	background-color: #FFFFCC;
+}
+
+.grid input[type="text"],.grid input[type="date"] {
+	margin: 0;
+}
+
+.end {
+	color: #888;
+	text-decoration: line-through;
+}
+
+.gray {
+	color:#888;
+	cursor: default;
+}
+
+.hr_title {
+	margin: 10px 0 30px 0;
+	border-top: 1px solid #a07527;
+}
+table {
+	background-color:#FFF;
+	border: 1px solid #DDD;
+}
+
+.act {
+	background-color:#F0F0F0;
+}
+
+th,td {
+  border-top: 1px dotted #DDDDDD;
+	border-bottom: 1px dotted #DDDDDD;
+}
+	
