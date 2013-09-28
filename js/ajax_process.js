@@ -23,6 +23,34 @@ $(function(){
 	
 	$("#items tbody").disableSelection();
 	
+	$(document).on('click','.addItem',function(){
+		var name = $('#Add_name').val();
+		var nums = $('#Add_nums').val();
+		$.post('ajax/_ajax_insert.php', {
+			name: name,
+			nums: nums
+		}, function(rs) {
+			var e = $(
+				'<tr id="item_'+rs+'"data-id="'+rs+'">'+
+					'<td>'+
+						'<input type="checkbox">'+
+						'<span>'+name+'</span>'+
+					'</td>'+
+					'<td class="nums_area">'+nums+'</td>'+
+					'<td class="date_area"> - </td>'+
+					'<td>'+
+						'<span class="editItem"> <i class="icon-pencil"></i></span>'+
+						'<span class="deleteItem"> <i class="icon-remove"></i></span>'+
+						'<span class="dragItem"> <i class="icon-move"></i></span>'+
+					'</td>'+
+				'</tr>'
+			);
+			$('#items').append(e).find('tr:last');
+			$('#Add_nums').val('');
+			$('#Add_name').val('').focus();
+		});
+	});
+	
 	
 	$(document).on('click','.deleteItem',function(){
 		
@@ -76,25 +104,6 @@ $(function(){
 		
 		$("#item_"+id).empty().append(e);
 		$('#item_'+id+' input:eq(0)').focus();
-		
-		//console.log(name);
-		
-		/*
-		<tr>
-			<td>
-				<input type="text" id="" class="col_8" value="にんじん">
-			</td>
-			<td>
-				<input type="text" id="" class="col_5" value="300g">
-			</td>
-			<td>
-				<input type="date" id="">
-			</td>
-			<td>
-				<button id="addTaask" class="small">編集する</button>
-			</td>
-		</tr>
-		*/
 		
 	});
 	

@@ -24,8 +24,8 @@
 	<script src="js/kickstart.js"></script> <!-- KICKSTART -->
 	<link rel="stylesheet" href="css/kickstart.css" media="all" /> <!-- KICKSTART -->
 	<link rel="stylesheet" type="text/css" href="css/style.css" media="all">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
-  <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.8.23/jquery-ui.min.js"></script>
+   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+  <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"></script>
 	<script src="js/init.js"></script>
 </head>
 <body>
@@ -98,16 +98,16 @@
 			</tr>
 			<tr>
 				<td>
-					<input type="text" id="" class="col_10">
+					<input type="text" id="Add_name" class="col_10">
 				</td>
 				<td>
-					<input type="text" id="" class="col_5">
+					<input type="text" id="Add_nums" class="col_5">
 				</td>
 				<td>
-					<input type="date" id="">
+					<input type="date" id="Add_date">
 				</td>
 				<td>
-					<button id="addTaask" class="small">追加する</button>
+					<button class="small addItem">追加する</button>
 				</td>
 			</tr>
 		</table>

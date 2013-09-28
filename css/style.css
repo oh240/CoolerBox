@@ -3,7 +3,7 @@ body {
 	background-image:url("../img/cotton01.jpg");
 }
 
-i {
+i,.checkbox {
 	cursor: pointer;
 }
 
