@@ -2,11 +2,17 @@
 	
 	require('config_file/config.php');
 	require('config_file/functions.php');
+	/*
+	session_start();
 	
+	if(iseet($_SESSION['login_user'])) {
+		
+		header('Location:'.SITE_URL.'login.php');
+		exit;
+	}
+	*/
 	$dbh = connectDb();
-	
 	$items = array();
-	
 	$sql = "select * from items where chk_type != 'delete' order by seq";
 	
 	foreach ($dbh->query($sql) as $row) {
@@ -33,19 +39,6 @@
 	<div class="grid">
 		<br>
 		<h2>Cooler Keeper</h2>
-		<br>
-		<div class="notice success">
-			<i class="icon-ok"></i>
-				Success Messages !!		
-		</div>
-		<br>
-		<ul class="menu">
-			<li class="current"><a href="">野菜</a></li>
-			<li><a href="">精肉・魚介類</a></li>
-			<li class="divider"><a href="#">飲料水</a></li>
-			<li><a href="">その他</a></li>
-			<li><a href="">ジャンルの新規追加</a></li>
-		</ul>
 		<br>
 		<table id="items">
 			<tbody>
